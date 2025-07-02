@@ -1,6 +1,7 @@
 # Task: Mouseover, Mouseout
 
 Create a box (both height & width - 100px, red background color, text color - white)
+
 On mouseover : background color should be blue
 On mouseout : should return to red background color
 
