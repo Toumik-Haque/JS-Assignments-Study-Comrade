@@ -1,0 +1,32 @@
+<!-- DOM (Document Obj Model), BOM (Browser Obj Model), Hoisting
+Task 17: Display 3 cards in a row through js -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task17</title>
+</head>
+
+<body>
+
+    <script>
+
+        const divTag = document.createElement('div')
+        document.body.appendChild(divTag)
+
+        divTag.innerHTML = `
+
+            <div style="background-color: aquamarine; height: 500px; width: 350px;"></div>
+            <div style="background-color: aquamarine; height: 500px; width: 350px;"></div>
+            <div style="background-color: aquamarine; height: 500px; width: 350px;"></div>
+        `
+        divTag.style.display = 'flex'
+        divTag.style.justifyContent = 'space-around'
+
+    </script>
+</body>
+
+</html>

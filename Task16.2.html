@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task16.2</title>
+</head>
+<body>
+
+    <script>
+
+        var v = prompt("Enter a letter:")
+        v = v.toLowerCase()
+
+        if (v.length === 1 && v >= 'a' && v <= 'z') {
+
+            var arr = ['a','e','i','o','u']
+            if(arr.includes(v)){
+                alert("It's a Vowel.")
+            }
+           
+            // if (v === 'a' || v === 'e' || v === 'i' || v === 'o' || v === 'u') {
+            //     alert("It's a Vowel.")
+            // }
+
+            else {
+                alert("It's a Consonant.")
+            }
+        }
+        else {
+            alert("Please enter single letter.")
+        }
+    </script>
+    
+</body>
+</html>

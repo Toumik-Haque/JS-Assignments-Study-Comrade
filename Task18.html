@@ -1,0 +1,144 @@
+<!-- Forms, Form Validations, RegExp
+Task 18: create a form and validate it: email, contact, name, age,designation, select multiple files, DOB and submit form -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task18</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        const form = document.createElement('form')
+        document.body.appendChild(form)
+
+        form.style.display = 'flex'
+        form.style.flexDirection = 'column'
+        form.style.gap = '10px'
+        form.style.padding = '10px'
+        form.style.width = '300px'
+
+
+
+        const nameInput = document.createElement('input')
+        form.appendChild(nameInput)
+
+        nameInput.type = 'text'
+        nameInput.placeholder = 'Name'
+        nameInput.style.padding = '5px 10px'
+        nameInput.required = true
+
+        const email = document.createElement('input')
+        form.appendChild(email)
+
+        email.type = 'email'
+        email.placeholder = 'Email'
+        email.style.padding = '5px 10px'
+        email.required = true
+
+        const contact = document.createElement('input')
+        form.appendChild(contact)
+
+        contact.type = 'number'
+        contact.placeholder = 'Phone Number'
+        contact.style.padding = '5px 10px'
+        contact.required = true
+
+        const age = document.createElement('input')
+        form.appendChild(age)
+
+        age.type = 'number'
+        age.placeholder = 'Age'
+        age.style.padding = '5px 10px'
+        age.required = true
+
+        const dobDiv = document.createElement('div')
+        form.appendChild(dobDiv)
+
+        dobDiv.textContent = 'Date of Birth:'
+        dobDiv.style.display = 'flex'
+        dobDiv.style.alignItems = 'center'
+        dobDiv.style.justifyContent = 'space-between'
+
+        const dob = document.createElement('input')
+        dobDiv.appendChild(dob)
+
+        dob.type = 'date'
+        dob.style.padding = '5px 10px'
+        dob.style.width = '180px'
+        dob.required = true
+
+        const designation = document.createElement('input')
+        form.appendChild(designation)
+
+        designation.type = 'text'
+        designation.placeholder = 'Designation'
+        designation.style.padding = '5px 10px'
+        designation.required = true
+
+        const fileDiv = document.createElement('div')
+        form.appendChild(fileDiv)
+
+        fileDiv.textContent = 'Documents:'
+        fileDiv.style.display = 'flex'
+        fileDiv.style.alignItems = 'center'
+        fileDiv.style.justifyContent = 'space-between'
+
+        const files = document.createElement('input')
+        fileDiv.appendChild(files)
+
+        files.type = 'file'
+        files.multiple = true
+        files.style.border = 'solid 1px grey'
+        files.style.width = '190px'
+        files.style.padding = '5px'
+
+
+        const button = document.createElement('button')
+        form.appendChild(button)
+
+        button.type = 'submit'
+        button.textContent = 'Submit'
+        button.style.width = '80px'
+        button.style.alignSelf = 'center'
+        button.style.marginTop = '25px'
+        button.style.padding = '5px'
+        button.style.backgroundColor = 'rgb(0, 106, 255)'
+        button.style.color = 'white'
+
+        const inputFeilds = [nameInput, email, contact, age, dob, designation, files]
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault() // prevent to refresh the page
+
+            if (contact.value.length != 10) {
+                alert("Please Enter 10-digit Phone Number")
+            }
+            else if (age.value.length != 2) {
+                alert("Please Enter your Age correctly")
+            }
+            else {
+                if (confirm("Are you sure to submit now?")) {
+                    inputFeilds.forEach(ele => {
+                        ele.value = '';
+                    })
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

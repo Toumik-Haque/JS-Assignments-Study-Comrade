@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task14.4</title>
+</head>
+<body>
+    <!-- Task 14:
+        4. write function to generate random background color of body (hint: Math.random()) -->
+
+    <script>
+        const r = Math.floor(Math.random()*100)
+        const g = Math.floor(Math.random()*100)
+        const b = Math.floor(Math.random()*100)
+
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    </script>
+
+</body>
+</html>

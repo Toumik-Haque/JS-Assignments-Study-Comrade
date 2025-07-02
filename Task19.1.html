@@ -1,0 +1,88 @@
+<!-- Task 19:
+1. look for api and display movie records in the form of cards in UI (movie data api) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task19.1</title>
+
+    <style>
+        body{
+            padding: 25px 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #movieContainer{
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            width: 350px;
+            background-color: black;
+            color: white;
+        }
+
+        .card div{
+            padding: 10px;
+            line-height: 10px;
+        }
+
+        .card h3{
+            margin-bottom: 25px;
+        }
+
+        .card img{
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="margin-bottom: 30px;">Movie Records</h1>
+    <div id="movieContainer"></div>
+
+
+    <script>
+        const movieContainer = document.getElementById('movieContainer')
+
+        async function fetchMovies() {
+            const response = await fetch('https://ghibliapi.vercel.app/films')
+            const movieData = await response.json()
+
+            console.log(movieData)
+
+            movieData.forEach(movie => {
+                var card = document.createElement('div')
+                movieContainer.appendChild(card)
+                card.className = 'card'
+
+                card.innerHTML = `
+
+                <img src="${movie.image}" alt="">
+                <div>
+                    <h3>${movie.title}</h3>
+                    <p>Release Date: ${movie.release_date}</p>
+                    <p>Director Name: ${movie.director}</p>
+                </div>
+
+                `
+                console.log(card)
+            });
+        }
+
+        fetchMovies()
+    </script>
+
+</body>
+
+</html>

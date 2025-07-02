@@ -1,0 +1,33 @@
+<!-- Create a box (both height & width - 100px, red background color, text color - white)
+On mouseover : background color should be blue
+On mouseout : should return to red background color -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover</title>
+</head>
+<body>
+    
+    <button id="newButton">Hover Me</button>
+
+    <script>
+        const buttonZ = document.getElementById('newButton');
+        buttonZ.style.height = '100px';
+        buttonZ.style.width = '100px';
+        buttonZ.style.backgroundColor = 'red';
+        buttonZ.style.color = 'white';
+
+        buttonZ.addEventListener("mouseover", function () {
+            buttonZ.style.backgroundColor = 'blue'
+        })
+
+        buttonZ.addEventListener("mouseout", function () {
+            buttonZ.style.backgroundColor = 'red'
+        })
+    </script>
+    
+</body>
+</html>
