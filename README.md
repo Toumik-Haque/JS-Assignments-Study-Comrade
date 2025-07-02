@@ -1,25 +1,23 @@
 # Task: Mouseover, Mouseout
 
-Create a box (both height & width - 100px, red background color, text color - white)
-On mouseover : background color should be blue
-On mouseout : should return to red background color
+Create a box (both height & width - 100px, red background color, text color - white); On mouseover : background color should be blue; On mouseout : should return to red background color
 
 # Task 11:
 
-Implicit coercion:
-practice questions on implicit coercion
-// console.log('A' - 1); //
-// console.log('A' + 1); //A1
-// console.log(2 + '2' + '2'); //
-// console.log('hello' + 'world' + 89); //
-// console.log('hello' - 'world' + 89); //
-// console.log('hello' + 78); //
-// console.log('78' - 90 + '2'); //
-// console.log(2 - '2' + 90); //
-// console.log(89 - '90' / 2); //
-// console.log((true == false) > 2); //
+Implicit coercion: practice questions on implicit coercion
+1. console.log('A' - 1); //
+2. console.log('A' + 1); //A1
+3. console.log(2 + '2' + '2'); //
+4. console.log('hello' + 'world' + 89); //
+5. console.log('hello' - 'world' + 89); //
+6. console.log('hello' + 78); //
+7. console.log('78' - 90 + '2'); //
+8. console.log(2 - '2' + 90); //
+9. console.log(89 - '90' / 2); //
+10. console.log((true == false) > 2); //
 
 # Task 12:
+
 
 1. extract first five letters from a string (' gfuh ieiuei ')
 2. get the length of a string and make it uppercase ('hduej dij')
@@ -46,7 +44,6 @@ practice questions on implicit coercion
 5. onload of your webpage, display modal (bootstrap 4 or 5)
 
 # Task 15:
-
 ▪ Conditional Statements
 
 1. given number is multiple of 3 or not e.g.10900
